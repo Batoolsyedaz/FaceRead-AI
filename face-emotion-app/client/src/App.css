@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradientMove 10s ease infinite alternate;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 3px, transparent 0),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05) 3px, transparent 0),
+    radial-gradient(circle at 50% 70%, rgba(255,255,255,0.05) 3px, transparent 0);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  z-index: -1;
+}
+
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 360px;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.webcam-wrapper {
+  border: 5px solid #2575fc;
+  border-radius: 15px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.capture-button {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.capture-button:hover {
+  background-color: #1a5cd8;
+}
+
+.emotion-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.emotion-text span {
+  font-weight: bold;
+  color: #2575fc;
+}
